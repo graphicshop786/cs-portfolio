@@ -13,6 +13,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/main.js" defer></script>
 </head>
+<style>
+/* Mobile menu overlay and animation fix */
+#mobile-menu {
+  transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  background: #f0e812;
+}
+#mobile-menu.open {
+  max-height: 400px;
+  opacity: 1;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+}
+/* Mobile menu link hover color yellow */
+#mobile-menu a.nav-link:hover, #mobile-menu a.nav-link:focus {
+  color: #FFD700 !important;
+}
+</style>
+<script>
+// Mobile menu toggle logic
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let lastScrollY = window.scrollY;
+  let menuWasOpen = false;
+
+  menuBtn.addEventListener('click', function() {
+    if (mobileMenu.classList.contains('open')) {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    } else {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+    }
+  });
+  // Close menu on nav link click (mobile)
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  // Auto-hide mobile menu on scroll
+  window.addEventListener('scroll', function() {
+    if (mobileMenu.classList.contains('open')) {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+  });
+});
+</script>
 <body class="bg-primary text-gray-100">
     <nav id="navbar" class="fixed top-0 w-full z-50 bg-black text-black" aria-label="Main navigation">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -32,11 +90,11 @@
         </div>
         <div id="mobile-menu" class="navbar-mobile hidden md:hidden bg-secondary" aria-hidden="true">
             <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-                <a href="#home" class="hover:text-accent transition nav-link text-black" aria-label="Go to Home section">Home</a>
-                <a href="#about" class="hover:text-accent transition nav-link text-black" aria-label="Go to About section">About</a>
-                <a href="#projects" class="hover:text-accent transition nav-link text-black" aria-label="Go to Projects section">Projects</a>
-                <a href="#cv" class="hover:text-accent transition nav-link text-black" aria-label="Go to CV section">CV</a>
-                <a href="#contact" class="hover:text-accent transition nav-link text-black" aria-label="Go to Contact section">Contact</a>
+                <a href="#home" class="hover:text-yellow-400 transition nav-link text-white" aria-label="Go to Home section">Home</a>
+                <a href="#about" class="hover:text-yellow-400 transition nav-link text-white" aria-label="Go to About section">About</a>
+                <a href="#projects" class="hover:text-yellow-400 transition nav-link text-white" aria-label="Go to Projects section">Projects</a>
+                <a href="#cv" class="hover:text-yellow-400 transition nav-link text-black" aria-label="Go to CV section">CV</a>
+                <a href="#contact" class="hover:text-yellow-400 transition nav-link text-white" aria-label="Go to Contact section">Contact</a>
             </div>
         </div>
     </nav>
@@ -237,7 +295,7 @@
             <div class="pro-glass p-6">
                 <h2 id="contact-title" class="text-3xl font-bold mb-4">Get in Touch</h2>
                 <p class="text-lg mb-2">I'm always open to new opportunities, collaborations, or just a friendly chat about tech and coding. Feel free to reach out!</p>
-                <!-- <p class="text-lg mb-2"><strong>Email:</strong> <a href="mailto:graphicshop786@gmail.com" class="hover:text-accent transition underline" aria-label="Send email to graphicshop786@gmail.com">graphicshop786@gmail.com</a></p> -->
+                
                 <p class="text-lg mb-2"><strong>Email:</strong> <a href="mailto:graphicshop786@gmail.com" class="hover:text-accent transition underline" aria-label="Send email to graphicshop786@gmail.com"><i class="fas fa-envelope text-accent mr-2" aria-hidden="true"></i>graphicshop786@gmail.com</a></p>
                 <p class="text-lg mb-2"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/graphicshop786" class="hover:text-accent transition underline" aria-label="Visit LinkedIn profile of Bilal Hussain" target="_blank" rel="noopener"><i class="fab fa-linkedin text-blue-500 mr-2" aria-hidden="true"></i>graphicshop786</a></p>
                 <p class="text-lg mb-2"><strong>GitHub:</strong> <a href="https://github.com/graphicshop786" class="hover:text-accent transition underline" aria-label="Visit GitHub profile of Bilal Hussain" target="_blank" rel="noopener"><i class="fab fa-github text-gray-200 mr-2" aria-hidden="true"></i>graphicshop786</a></p>
