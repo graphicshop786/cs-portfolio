@@ -9,11 +9,11 @@ A clean, responsive design with animations and modern styling.
 
 How to Set Up
 
-Clone the Repository:git clone https://github.com/bilal-hussain/bilal-hussain-portfolio.git
+Clone the Repository:git clone [https://github.com/bilal-hussain/bilal-hussain-portfolio.git](https://github.com/graphicshop786/cs-portfolio)
 
 
 Open the Website:
-Visit the live site directly at: https://bilal-hussain.github.io/bilal-hussain-portfolio
+Visit the live site directly at: [https://bilal-hussain.github.io/bilal-hussain-portfolio](https://graphicshop786.github.io/cs-portfolio/)
 Or open index.html in any web browser after cloning.
 
 
@@ -52,9 +52,9 @@ Details include my education, skills, and projects.
 Get in Touch
 I’m open to opportunities and collaborations. Feel free to connect with me:
 
-Email: bilal.hussain@example.com
-GitHub: bilal-hussain
-LinkedIn: bilal-hussain
+Email: graphicshop786@gmail.com
+GitHub: @graphicshop786
+LinkedIn: @graphicshop786
 
 License
 This project is licensed under the MIT License. Feel free to explore and use the code!
