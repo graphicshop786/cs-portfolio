@@ -1,0 +1,333 @@
+/* Custom animated card styles for projects */
+.cardBox {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+  background: none;
+}
+.card {
+  background: rgba(26,26,26,0.98);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(255,215,0,0.10), 0 2px 8px rgba(0,0,0,0.18);
+  border: 1.5px solid #FFD700;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 16px 48px 0 rgba(255,215,0,0.22), 0 4px 16px rgba(0,0,0,0.22);
+  border-color: #fff;
+  background: rgba(34,34,34,0.99);
+}
+.card h2 {
+  color: #FFD700;
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.card span {
+  display: inline-block;
+  color: #fff;
+  background: #FFD70022;
+  border-radius: 9999px;
+  padding: 0.25em 1em;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.card:hover span {
+  background: #FFD700;
+  color: #222;
+}
+.card .content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(255,215,0,0.10);
+  border: 1px solid #FFD700;
+}
+.card h3 {
+  color: #FFD700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.card p, .card ul {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.card ul {
+  margin-bottom: 1rem;
+  padding-left: 1.2em;
+}
+.card .text-accent {
+  color: #FFD700 !important;
+  font-weight: 600;
+}
+.card a.pro-btn {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255,215,0,0.10);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.card a.pro-btn.bg-accent {
+  background: #FFD700 !important;
+  color: #222 !important;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom color palette */
+
+:root {
+    --primary: #000000;
+    --secondary: #1a1a1a;
+    --accent: #FFD700;
+    --accent-light: #FFD700;
+    --text-main: #FFFFFF;
+}
+
+.bg-primary { background: var(--primary) !important; }
+.bg-secondary { background: var(--secondary) !important; }
+.text-accent { color: var(--accent) !important; }
+.border-accent { border-color: var(--accent) !important; }
+.pro-gradient { background: var(--accent) !important; }
+
+body {
+    background: var(--primary);
+    color: var(--text-main);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar shadow and transition for sticky effect */
+#navbar {
+    transition: all 0.5s cubic-bezier(.4,0,.2,1);
+    background: var(--accent);
+}
+#navbar.scrolled {
+    background: var(--accent-light);
+    box-shadow: 0 4px 16px rgba(255,215,0,0.15);
+}
+
+/* Button and link hover effect */
+.pro-btn {
+    background: var(--accent);
+    color: var(--primary);
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 14px rgba(255,215,0,0.15);
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+.pro-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    background: #fff;
+    color: var(--accent);
+    box-shadow: 0 8px 24px rgba(255,215,0,0.25);
+}
+.pro-btn:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Project card hover effect */
+.project-card {
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    background: rgba(26,26,26,0.98);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(255,215,0,0.10), 0 2px 8px rgba(0,0,0,0.18);
+    border: 1.5px solid #FFD700;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+.project-card:hover {
+    transform: translateY(-8px) scale(1.035);
+    box-shadow: 0 16px 48px 0 rgba(255,215,0,0.22), 0 4px 16px rgba(0,0,0,0.22);
+    border-color: #fff;
+    background: rgba(34,34,34,0.99);
+}
+.project-card img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(255,215,0,0.10);
+    border: 1px solid #FFD700;
+}
+.project-card h3 {
+    color: #FFD700;
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+.project-card p, .project-card ul {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.project-card ul {
+    margin-bottom: 1rem;
+}
+.project-card .pro-btn {
+    margin-top: 1.25rem;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(255,215,0,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.project-card .pro-btn + .pro-btn {
+    margin-top: 0.5rem;
+}
+.project-card .text-accent {
+    color: #FFD700 !important;
+    font-weight: 600;
+}
+.project-card a.pro-btn {
+    margin-bottom: 0.25rem;
+}
+
+/* Glassmorphism for pro-glass */
+.pro-glass {
+    background: rgba(0,0,0,0.85);
+    box-shadow: 0 8px 32px rgba(255,215,0,0.08);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid var(--accent);
+    padding: 2rem;
+}
+
+/* pro-gradient now uses solid accent-light color */
+.pro-gradient {
+    background: var(--accent) !important;
+}
+
+/* Gradient text for pro-title */
+.pro-title {
+    color: var(--accent);
+    text-shadow: 0 2px 8px rgba(255,215,0,0.25);
+}
+
+.pro-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.pro-glass h2, .pro-glass p, .pro-glass a, .pro-glass li, .pro-glass h3 {
+    color: var(--text-main);
+    text-shadow: 0 1px 4px rgba(255,215,0,0.08);
+}
+
+.navbar-mobile a:hover, .navbar-desktop a:hover {
+    color: #222 !important;
+    text-decoration: underline;
+}
+/* Active nav link */
+.nav-link.active, .nav-link[aria-current="page"] {
+    color: #fff !important;
+    background: none;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#back-to-top {
+    transition: opacity 0.3s ease-in-out;
+}
+#back-to-top.visible {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .pro-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width: 900px) {
+    .grid-cols-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
+    .navbar-mobile {
+        display: block;
+    }
+    #mobile-menu {
+        box-shadow: 0 8px 32px rgba(255,215,0,0.08);
+        border: 2px solid var(--accent);
+        border-radius: 12px;
+        background: var(--secondary);
+    }
+    .pro-section {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .pro-glass {
+        padding: 1.5rem;
+    }
+    .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .pro-title, h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+    .pro-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

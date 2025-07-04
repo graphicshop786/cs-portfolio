@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Portfolio of Bilal Hussain, a computer science student and web developer. Projects, CV, and contact information.">
+    <meta name="keywords" content="Bilal Hussain, portfolio, web developer, computer science, projects, CV, contact">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal Hussain</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/backtotop.css">
+    <!-- Font Awesome for skill icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/main.js" defer></script>
+</head>
+<body class="bg-primary text-gray-100">
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-black text-black" aria-label="Main navigation">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Bilal Hussain</div>
+            <div class="navbar-desktop hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-accent transition nav-link text-black" aria-label="Go to Home section">Home</a>
+                <a href="#about" class="hover:text-accent transition nav-link text-black" aria-label="Go to About section">About</a>
+                <a href="#projects" class="hover:text-accent transition nav-link text-black" aria-label="Go to Projects section">Projects</a>
+                <a href="#cv" class="hover:text-accent transition nav-link text-black" aria-label="Go to CV section">CV</a>
+                <a href="#contact" class="hover:text-accent transition nav-link text-black" aria-label="Go to Contact section">Contact</a>
+            </div>
+            <div class="navbar-mobile md:hidden">
+                <button id="mobile-menu-btn" class="text-2xl focus:outline-none focus:ring-2 focus:ring-accent text-black" aria-label="Toggle mobile menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="navbar-mobile hidden md:hidden bg-secondary" aria-hidden="true">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#home" class="hover:text-accent transition nav-link text-black" aria-label="Go to Home section">Home</a>
+                <a href="#about" class="hover:text-accent transition nav-link text-black" aria-label="Go to About section">About</a>
+                <a href="#projects" class="hover:text-accent transition nav-link text-black" aria-label="Go to Projects section">Projects</a>
+                <a href="#cv" class="hover:text-accent transition nav-link text-black" aria-label="Go to CV section">CV</a>
+                <a href="#contact" class="hover:text-accent transition nav-link text-black" aria-label="Go to Contact section">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pro-section fade-in" aria-labelledby="home-title">
+        <div class="container mx-auto px-4 text-center">
+            <img src="assets/profile.jpg" alt="Bilal Hussain profile picture" class="mx-auto mb-6 w-32 h-32 rounded-full border-4 border-accent shadow-lg" />
+            <h1 id="home-title" class="text-5xl font-bold mb-4 pro-title">Welcome to My Portfolio</h1>
+            <p class="text-xl mb-2">Hi, I'm Bilal Hussain, a passionate computer science student based in Germany.</p>
+            <p class="text-lg mb-2">I specialize in web development, data analysis, and building modern, user-friendly digital experiences. My goal is to create impactful solutions that blend creativity and technology.</p>
+            <p class="text-lg mb-6">Scroll down to see my projects, skills, and how to get in touch!</p>
+            <a href="#projects" class="pro-btn inline-block px-6 py-3 text-lg" aria-label="Scroll to Projects section">See My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="pro-section fade-in" aria-labelledby="about-title">
+        <div class="container mx-auto px-4">
+            <div class="pro-glass p-6">
+                <h2 id="about-title" class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="text-lg mb-2">I'm currently pursuing my BSc in Computer Science at Gisma University of Applied Sciences. My academic journey has equipped me with a strong foundation in programming, algorithms, and software engineering.</p>
+                <p class="text-lg mb-2">I have hands-on experience with JavaScript, Python, React, Node.js, and data science tools like Pandas and NumPy. I also enjoy working with LaTeX for professional document creation.</p>
+                <p class="text-lg mb-2">Beyond coding, I love collaborating on team projects, learning new technologies, and contributing to open-source. My interests include UI/UX design, automation, and building tools that make life easier.</p>
+            </div>
+        </div>
+
+    <section id="skills" class="pro-section fade-in" aria-labelledby="skills-title">
+        <div class="container mx-auto px-4">
+            <div class="pro-glass p-6">
+                <h2 id="skills-title" class="text-3xl font-bold mb-8 text-center">My Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Languages -->
+                    <div class="bg-secondary rounded-xl shadow-lg p-6 flex flex-col items-center">
+                        <svg class="mb-4" width="90" height="90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" opacity="0.2" />
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" stroke-dasharray="251.2" stroke-dashoffset="25" stroke-linecap="round" style="transition: stroke-dashoffset 1s;" />
+                            <text x="50" y="55" text-anchor="middle" font-size="22" fill="#FFD700" font-weight="bold">90%</text>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2 text-accent">Languages</h3>
+                        <ul class="text-base text-left list-disc ml-4">
+                            <li><i class="fab fa-js-square text-yellow-400 mr-2" aria-hidden="true"></i>JavaScript</li>
+                            <li><i class="fab fa-python text-blue-400 mr-2" aria-hidden="true"></i>Python</li>
+                            <li><i class="fab fa-html5 text-orange-500 mr-1" aria-hidden="true"></i><i class="fab fa-css3-alt text-blue-500 mr-2" aria-hidden="true"></i>HTML, CSS</li>
+                            <li><i class="fas fa-database text-green-400 mr-2" aria-hidden="true"></i>SQL</li>
+                        </ul>
+                    </div>
+                    <!-- Frameworks -->
+                    <div class="bg-secondary rounded-xl shadow-lg p-6 flex flex-col items-center">
+                        <svg class="mb-4" width="90" height="90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" opacity="0.2" />
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" stroke-dasharray="251.2" stroke-dashoffset="50" stroke-linecap="round" style="transition: stroke-dashoffset 1s;" />
+                            <text x="50" y="55" text-anchor="middle" font-size="22" fill="#FFD700" font-weight="bold">80%</text>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2 text-accent">Frameworks</h3>
+                        <ul class="text-base text-left list-disc ml-4">
+                            <li><i class="fab fa-react text-blue-300 mr-2" aria-hidden="true"></i>React</li>
+                            <li><i class="fab fa-node-js text-green-500 mr-2" aria-hidden="true"></i>Node.js</li>
+                            <li><i class="fas fa-server text-gray-400 mr-2" aria-hidden="true"></i>Express</li>
+                        </ul>
+                    </div>
+                    <!-- Tools -->
+                    <div class="bg-secondary rounded-xl shadow-lg p-6 flex flex-col items-center">
+                        <svg class="mb-4" width="90" height="90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" opacity="0.2" />
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" stroke-dasharray="251.2" stroke-dashoffset="75" stroke-linecap="round" style="transition: stroke-dashoffset 1s;" />
+                            <text x="50" y="55" text-anchor="middle" font-size="22" fill="#FFD700" font-weight="bold">70%</text>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2 text-accent">Tools</h3>
+                        <ul class="text-base text-left list-disc ml-4">
+                            <li><i class="fab fa-git-alt text-red-500 mr-2" aria-hidden="true"></i>Git</li>
+                            <li><i class="fas fa-code text-blue-400 mr-2" aria-hidden="true"></i>VS Code</li>
+                            <li><i class="fas fa-file-alt text-gray-400 mr-2" aria-hidden="true"></i>LaTeX</li>
+                            <li><i class="fas fa-chart-bar text-yellow-400 mr-1" aria-hidden="true"></i>Pandas, NumPy</li>
+                        </ul>
+                    </div>
+                    <!-- Soft Skills -->
+                    <div class="bg-secondary rounded-xl shadow-lg p-6 flex flex-col items-center">
+                        <svg class="mb-4" width="90" height="90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" opacity="0.2" />
+                            <circle cx="50" cy="50" r="40" stroke="#FFD700" stroke-width="10" fill="none" stroke-dasharray="251.2" stroke-dashoffset="100" stroke-linecap="round" style="transition: stroke-dashoffset 1s;" />
+                            <text x="50" y="55" text-anchor="middle" font-size="22" fill="#FFD700" font-weight="bold">60%</text>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2 text-accent">Soft Skills</h3>
+                        <ul class="text-base text-left list-disc ml-4">
+                            <li><i class="fas fa-users text-green-400 mr-2" aria-hidden="true"></i>Teamwork</li>
+                            <li><i class="fas fa-comments text-blue-400 mr-2" aria-hidden="true"></i>Communication</li>
+                            <li><i class="fas fa-lightbulb text-yellow-400 mr-2" aria-hidden="true"></i>Problem-solving</li>
+                            <li><i class="fas fa-sync-alt text-purple-400 mr-2" aria-hidden="true"></i>Adaptability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <section id="projects" class="pro-section fade-in" aria-labelledby="projects-title">
+        <div class="container mx-auto px-4">
+            <h2 id="projects-title" class="text-3xl font-bold mb-8 text-center">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Improved Project Card 1 -->
+              <div class="cardBox">
+                <div class="project-card glassmorphism hover:scale-105 transition-transform duration-300 shadow-2xl group">
+                  <div class="project-card-image relative overflow-hidden rounded-t-xl">
+                    <img src="assets/design-brief-generator.jpg" alt="Screenshot of Design Brief Generator project" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <span class="absolute top-2 right-2 bg-black bg-opacity-60 text-xs text-gold px-2 py-1 rounded">Web App</span>
+                  </div>
+                  <div class="p-5 flex flex-col h-full">
+                    <h3 class="text-xl font-bold mb-2 text-accent flex items-center"><i class="fas fa-lightbulb mr-2 text-yellow-400"></i>Design Brief Generator</h3>
+                    <p class="mb-2 text-gray-200">A web app to quickly generate professional design briefs for clients and creative teams.</p>
+                    <ul class="mb-3 list-disc ml-5 text-sm text-gray-100">
+                      <li>Guided form for all essential project details</li>
+                      <li>Instant PDF export and shareable preview</li>
+                      <li>Mobile-friendly and easy to use</li>
+                    </ul>
+                    <div class="flex-1"></div>
+                    <p class="text-accent text-xs mb-2"><i class="fab fa-js-square mr-1"></i>JavaScript <i class="fab fa-html5 mx-1"></i>HTML <i class="fab fa-css3-alt mx-1"></i>CSS <i class="fab fa-github mx-1"></i>GitHub Pages</p>
+                    <div class="flex space-x-2 mt-2">
+                      <div class="w-full flex flex-col sm:flex-row gap-3 items-center justify-center">
+                        <div class="flex-1 flex items-center justify-center">
+                          <a href="https://github.com/graphicshop786/design-brief-generator" class="pro-btn bg-black text-gold border border-gold hover:bg-gold hover:text-black transition flex items-center justify-center text-base font-semibold w-full" style="height:48px;min-width:140px;max-width:160px;" target="_blank" rel="noopener"><i class="fab fa-github mr-1"></i>GitHub</a>
+                        </div>
+                        <div class="flex-1 flex items-center justify-center">
+                          <a href="https://graphicshop786.github.io/design-brief-generator" class="pro-btn bg-gold text-black border border-gold hover:bg-black hover:text-gold transition flex items-center justify-center text-base font-semibold w-full" style="height:48px;min-width:140px;max-width:160px;" target="_blank" rel="noopener"><i class="fas fa-external-link-alt mr-1"></i>Live</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Improved Project Card 2 -->
+              <div class="cardBox">
+                <div class="project-card glassmorphism hover:scale-105 transition-transform duration-300 shadow-2xl group">
+                  <div class="project-card-image relative overflow-hidden rounded-t-xl">
+                    <img src="assets/illustrator-scripts.jpg" alt="Screenshot of Master Illustrator Scripts project" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <span class="absolute top-2 right-2 bg-black bg-opacity-60 text-xs text-gold px-2 py-1 rounded">Automation</span>
+                  </div>
+                  <div class="p-5 flex flex-col h-full">
+                    <h3 class="text-xl font-bold mb-2 text-accent flex items-center"><i class="fas fa-magic mr-2 text-purple-400"></i>Master Illustrator Scripts</h3>
+                    <p class="mb-2 text-gray-200">A collection of advanced scripts and a custom load panel for Adobe Illustrator to automate repetitive design tasks.</p>
+                    <ul class="mb-3 list-disc ml-5 text-sm text-gray-100">
+                      <li>One-click script loading and management</li>
+                      <li>Productivity boosters for designers</li>
+                      <li>Compatible with latest Illustrator versions</li>
+                    </ul>
+                    <div class="flex-1"></div>
+                    <p class="text-accent text-xs mb-2"><i class="fab fa-js-square mr-1"></i>JavaScript (ExtendScript) <i class="fab fa-adobe mx-1"></i>Adobe Scripting</p>
+                    <div class="flex space-x-2 mt-2">
+                      <a href="https://github.com/graphicshop786/Master-Illustrator-Scripts-With-Load-Panel" class="pro-btn flex-1" target="_blank" rel="noopener"><i class="fab fa-github mr-1"></i>GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Improved Project Card 3 -->
+              <div class="cardBox">
+                <div class="project-card glassmorphism hover:scale-105 transition-transform duration-300 shadow-2xl group">
+                  <div class="project-card-image relative overflow-hidden rounded-t-xl">
+                    <img src="assets/article-writer.png" alt="Screenshot of GraphicShop Article Writer project" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <span class="absolute top-2 right-2 bg-black bg-opacity-60 text-xs text-gold px-2 py-1 rounded">AI Tool</span>
+                  </div>
+                  <div class="p-5 flex flex-col h-full">
+                    <h3 class="text-xl font-bold mb-2 text-accent flex items-center"><i class="fas fa-robot mr-2 text-green-400"></i>GraphicShop Article Writer</h3>
+                    <p class="mb-2 text-gray-200">A web-based tool to generate high-quality, SEO-friendly articles for blogs and websites using AI.</p>
+                    <ul class="mb-3 list-disc ml-5 text-sm text-gray-100">
+                      <li>Customizable topics, tone, and length</li>
+                      <li>Instant export to HTML or Markdown</li>
+                      <li>Built-in plagiarism checker</li>
+                    </ul>
+                    <div class="flex-1"></div>
+                    <p class="text-accent text-xs mb-2"><i class="fab fa-js-square mr-1"></i>JavaScript <i class="fab fa-node-js mx-1"></i>Node.js <i class="fas fa-brain mx-1"></i>OpenAI API</p>
+                    <div class="flex space-x-2 mt-2">
+                      <a href="https://github.com/graphicshop786/graphicshop-article-writer" class="pro-btn flex-1" target="_blank" rel="noopener"><i class="fab fa-github mr-1"></i>GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv" class="pro-section fade-in" aria-labelledby="cv-title">
+        <div class="container mx-auto px-4 text-center">
+            <div class="pro-glass p-6">
+                <h2 id="cv-title" class="text-3xl font-bold mb-4">My CV</h2>
+                <p class="text-lg mb-2">Download my CV to learn more about my education, technical skills, and professional experience.</p>
+                <ul class="text-left text-base mb-4 ml-4 list-disc">
+                    <li><strong>Education:</strong> BSc Computer Science, Gisma University</li>
+                    <li><strong>Technical Skills:</strong> JavaScript, Python, React, Node.js, Pandas, LaTeX</li>
+                    <li><strong>Experience:</strong> Web development, data analysis, academic projects, freelance work</li>
+                    <li><strong>Certifications:</strong> Responsive Web Design, Python for Everybody</li>
+                </ul>
+                <a href="assets/cv.pdf" class="pro-btn inline-block px-6 py-3" aria-label="Download Bilal Hussain CV as PDF" download>Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="pro-section fade-in" aria-labelledby="contact-title">
+        <div class="container mx-auto px-4 text-center">
+            <div class="pro-glass p-6">
+                <h2 id="contact-title" class="text-3xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-lg mb-2">I'm always open to new opportunities, collaborations, or just a friendly chat about tech and coding. Feel free to reach out!</p>
+                <!-- <p class="text-lg mb-2"><strong>Email:</strong> <a href="mailto:graphicshop786@gmail.com" class="hover:text-accent transition underline" aria-label="Send email to graphicshop786@gmail.com">graphicshop786@gmail.com</a></p> -->
+                <p class="text-lg mb-2"><strong>Email:</strong> <a href="mailto:graphicshop786@gmail.com" class="hover:text-accent transition underline" aria-label="Send email to graphicshop786@gmail.com"><i class="fas fa-envelope text-accent mr-2" aria-hidden="true"></i>graphicshop786@gmail.com</a></p>
+                <p class="text-lg mb-2"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/graphicshop786" class="hover:text-accent transition underline" aria-label="Visit LinkedIn profile of Bilal Hussain" target="_blank" rel="noopener"><i class="fab fa-linkedin text-blue-500 mr-2" aria-hidden="true"></i>graphicshop786</a></p>
+                <p class="text-lg mb-2"><strong>GitHub:</strong> <a href="https://github.com/graphicshop786" class="hover:text-accent transition underline" aria-label="Visit GitHub profile of Bilal Hussain" target="_blank" rel="noopener"><i class="fab fa-github text-gray-200 mr-2" aria-hidden="true"></i>graphicshop786</a></p>
+                <p class="text-lg mt-4">Or use the <a href="mailto:graphicshop786@gmail.com?subject=Contact%20from%20Portfolio" class="text-accent underline">contact form</a> to send me a message directly.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center">
+        <p class="text-gray-300">© 2025 Bilal Hussain. All rights reserved.</p>
+    </footer>
+
+
+    <button class="backtop-fixed" id="back-to-top-btn" aria-label="Back to top" type="button">
+      <svg class="progress-circle" width="64" height="64" viewBox="0 0 64 64">
+        <circle class="progress-bg" cx="32" cy="32" r="28" stroke="#222" stroke-width="4" fill="none" />
+        <circle class="progress-bar" cx="32" cy="32" r="28" stroke="#FFD700" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="175.93" stroke-dashoffset="175.93" />
+      </svg>
+      <svg class="arrow-up-svg" width="22" height="22" viewBox="0 0 22 22" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">
+        <polyline points="6,13 11,8 16,13" fill="none" stroke="#FFD700" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <script>
+      // Show/hide back to top button and update progress circle
+      const backToTopBtn = document.getElementById('back-to-top-btn');
+      const progressBar = document.querySelector('.progress-bar');
+      function updateBackToTop() {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
+        // Animate progress circle
+        const dasharray = 2 * Math.PI * 28;
+        progressBar.setAttribute('stroke-dasharray', dasharray);
+        progressBar.setAttribute('stroke-dashoffset', dasharray - dasharray * progress);
+        // Show/hide button
+        if (scrollY > 200) {
+          backToTopBtn.style.display = 'flex';
+        } else {
+          backToTopBtn.style.display = 'none';
+        }
+      }
+      window.addEventListener('scroll', updateBackToTop);
+      window.addEventListener('resize', updateBackToTop);
+      // Smooth scroll to top
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+      // Hide by default
+      backToTopBtn.style.display = 'none';
+      updateBackToTop();
+    </script>
+</body>
+</html>
